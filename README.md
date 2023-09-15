@@ -54,8 +54,8 @@ Our platform is more than just a typical coding practice site. It's a hub for co
 Check out our live demo to experience the Let'sCoders Interactive Coding Website in action. You can access it [here](https://letscoders.netlify.app/).
 
 Demo Credentials:
-- **Username**: YourUsername
-- **Password**: YourPassword
+- **Username**: test
+- **Password**: 1234
 
 Feel free to explore the platform, interact with other users, and try out the daily coding challenges provided by our Telegram bot, [@LetsCodersBot](https://t.me/LetsCodersBot).
 
