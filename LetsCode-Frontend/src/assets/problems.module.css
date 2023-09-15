@@ -1,0 +1,198 @@
+.container {
+    padding: 20px;
+    min-height: 100vh;
+    background-color: #1a1a1a;
+    color:white;
+    padding-left: 30px;
+    @media (min-width: 576px) {
+      padding-left: 10%;
+    }
+  }
+
+  .maintitle{
+    font-weight: 500;
+    font-size: 25px;
+  }
+  
+  .header {
+    margin-bottom: 20px;
+  }
+  
+  .row {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .maindropdown {
+    background-color: #555555;
+    margin-right: 100px;
+    width: 150px;
+    border: none;
+    font-size: 20px;
+    border-radius: 5px;
+    color:white;
+    height: 40px;
+    @media (max-width:576px) {
+      margin-right: 0px;
+    }
+  }
+
+  .dropdowns {
+    background-color: #3a3a3a;
+    margin-right: 100px;
+    width: 150px;
+    border: none;
+    font-size: 18x;
+    border-radius: 5px;
+    color:white;
+    height: 36px;
+    @media (max-width:576px) {
+      margin-right: 0px;
+    }
+  }
+  
+  .iconText {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  .input{
+    color: white;
+    background-color: #3a3a3a;
+    font-size: 16px;
+    margin-top: 10px;
+    border: none;
+   }
+   .cell{
+    font-weight: 400;
+    overflow: hidden;
+    max-width: 140px;
+    white-space: nowrap;
+  }
+  .topicNames{
+    font-size: 13px;
+    margin-left: auto;
+    white-space: pre-wrap;
+    align-self: flex-end;
+    text-align: end;
+  }
+  .ProblemName{
+    font-size: 15px;
+    margin-right: 1%;
+  }
+ 
+.searchIcon {
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-left:  10px;
+  margin-right:  10px;
+}
+
+
+  .input:focus{
+    outline: none; 
+    color: white;
+   background-color: #3a3a3a;
+   box-shadow: none;
+  }
+  .input::placeholder {
+    color: white;
+  }
+  
+  .icon {
+    margin-right: 10px;
+    margin-top: 10px;
+  }
+  
+  .tableContainer {
+    overflow-x: auto;
+  }
+  
+
+  .green-text {
+    background-color: #3a3a3a;
+    color: #05b8a3;
+  }
+  
+  .red-text {
+    background-color: #3a3a3a;
+    color: red;
+  }
+  .white-text {
+    background-color: #3a3a3a;
+    color: white;
+  }
+
+  .pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+
+  .clearIconContainer {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 10px;
+    padding: 0 10px; /* Adjust spacing as needed */
+  }
+  .white-text:active {
+    background-color: #3a3a3a;
+    color: white;
+  }
+  
+  .white-text:hover {
+    background-color: #3a3a3a;
+    color: white;
+  }
+  .yellow-text {
+    background-color: #3a3a3a;
+    color: #ffc01e;
+  }
+
+
+
+  .yellow-text:active {
+    background-color: #3a3a3a;
+    color: white;
+  }
+  
+  .yellow-text:hover {
+    background-color: #3a3a3a;
+    color: white;
+  }
+  .red-text:active {
+    background-color: #3a3a3a;
+    color: white;
+  }
+  
+  .red-text:hover {
+    background-color: #3a3a3a;
+    color: white;
+  }
+  .green-text:active {
+    background-color: #3a3a3a;
+    color: white;
+  }
+  
+  .green-text:hover {
+    background-color: #3a3a3a;
+    color: white;
+  }
+  .Easy{
+    color: #05b8a3;
+  }
+  .Medium{
+    color:#ffc01e;
+  }
+  .Hard{
+    color:red
+  }
+  

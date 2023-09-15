@@ -1,0 +1,411 @@
+.userProfile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: max-content;
+    padding-left: 20px;
+    padding-top: 20px;
+    margin-top: 15px;
+    background-color: #282828;
+    color: white;
+    border-radius: 10px;
+  }
+  
+  .userStats {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  .subtitle{
+    font-weight: 400;
+    font-size: 16px;
+  }
+  .userIdtitle{
+    font-size: 18px;
+    padding-top: 7px;
+    font-weight: 500;
+  }
+  .countTitle{
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .followerItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px;
+  }
+.userNametitle{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.loader {
+  position: absolute; 
+  bottom: 0;
+  left: 50%; 
+  transform: translateX(-50%);
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 100px;
+}
+
+.spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.usertitle{
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+  
+  .modalBody {
+    background-color: #262626;
+    color: white;
+    max-height: 60vh; 
+    overflow-y: scroll;
+  }
+  .modalHeader{
+    background-color: #262626;
+    color: white;
+  }
+  .modalHeader .close{
+    color: white;
+  }
+  
+  .followerIcon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+  .userCard {
+    padding: 30px;
+    width: 100%;
+    height: 40px; 
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .postContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 10px; /* Adjust the gap between posts as needed */
+  }
+  
+.postdiv{
+  width: 49%;
+  overflow: hidden;
+}
+  
+  /* Media query for smaller screens to make each post take 100% width */
+  @media (max-width: 768px) {
+    .postContainer > * {
+      flex-basis: 100%;
+    }
+  }
+
+ /* ImageGrid.module.css */
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.image-item {
+  flex-basis: calc(33.33% - 10px);
+  margin-bottom: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+  box-sizing: border-box;
+  @media (max-width: 768px) {
+    flex-basis: 100%;
+  }
+}
+
+.image-item img {
+  height: 400px; /* Set a fixed height for all images */
+  width: auto;
+  max-width: 600px;
+  @media (max-width: 768px) {
+    max-width: 100%;
+  }
+}
+
+
+  
+
+  
+  .userIcon {
+    width: 24px;
+    height: 24px;
+    background-color: white;
+  
+  }
+  
+  .userInfo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+  }
+  
+  .profileLink {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+  }
+  
+  .profileIcon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .profileName {
+    font-weight: 400;
+  }
+
+  .profileUserName{
+    font-weight: bold;
+  }
+  
+  .customDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+  }
+  
+  .customIcon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .followersLink, .followingLink {
+    cursor: pointer;
+  }
+  
+
+/* UserDetails.module.css */
+
+.userContainer {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    background-color: #282828;
+    height: 260px;
+    border-radius: 10px;
+  }
+  
+  .userColumn {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .profileContainer {
+    min-height: 100vh;
+    background-color: #1a1a1a;
+    padding: 10px;
+    @media (min-width: 768px) {
+      padding-left: 90px;
+    }
+  }
+  
+  
+  
+  .userDetail {
+    display: flex;
+    align-items: start;
+    margin-bottom: 15px;
+    color: white;
+  }
+  
+  .icon {
+    margin-right: 10px;
+    height: 20px;
+    width: 20px;
+  }
+  
+  .name {
+    color: white;
+    font-weight: bold;
+  }
+  
+
+  .lcdiv{
+    height: 280px;
+    background-color: #282828;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .lctitle{
+    font-weight: 500;
+    font-size: 20px;
+    color: #9fa1a4;
+  }
+
+  .problemsdiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .spantitle{
+    font-size: 17px;
+    color: #636366;
+  }
+  
+  .progressContainer {
+    width: 100%;
+    height: 6px;
+    margin-top: 5px;
+}
+
+.difficultyTitle{
+   color: #9fa1a4;
+   font-size: 18px;
+}
+
+  .pie {
+    --w: 100px;
+    height: 100px;
+    color: white;
+    width: var(--w);
+    aspect-ratio: 1;
+    position: relative;
+    display: inline-grid;
+    place-content: center;
+    margin: 5px;
+    font-size: 30px;
+    font-weight: 500;
+    font-family: sans-serif;
+    margin-right: 15px;
+    border: 2px solid #4b4a49;
+    border-radius: 50%;
+  }
+  
+  .pie:before {
+    content: "";
+    position: absolute;
+    border-radius: 49%;
+    inset: 0;
+    background: conic-gradient(var(--c) calc(var(--p)*1%), #0000 0);
+    -webkit-mask: radial-gradient(farthest-side, #0000 calc(99% - var(--b)), #000 calc(100% - var(--b)));
+    mask: radial-gradient(farthest-side, #0000 calc(99% - var(--b)), #000 calc(100% - var(--b)));
+  }
+
+
+  /* CalendarStats.module.css */
+.calcContainer{
+  padding: 10px;
+  width: 100%;
+  background-color: #282828;
+  overflow-x: auto;
+  color: white;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.calcContainer::-webkit-scrollbar {
+  display: none; 
+}
+.Calendarr {
+  display: flex;
+  justify-content: center;
+  overflow-x: auto;
+  white-space: nowrap; 
+  overflow-y: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  max-width: 100%;
+}
+
+.CalendarContainer {
+  margin-top: 40px;
+  width: 950px;
+  overflow: hidden;
+  @media (min-width: 768px) {
+    margin-top: 5px;
+  }
+}
+.Calendarr::-webkit-scrollbar {
+  display: none; 
+}
+.statsContainer {
+  display: flex;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  align-items: center;
+  justify-content: space-between;
+  height: 45px;
+  padding: 0 10px;
+  border-radius: 4px;
+}
+
+.statItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.dropdown {
+  position: relative;
+  display: flex;
+  align-items: start;
+  cursor: pointer;
+  padding: 5px 10px;
+  background-color: #464646;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  margin-left: 10px;
+}
+
+.dropdown:focus{
+  background-color: #303030;
+}
+
+
+.spanyeartitle{
+  color: #bdbfc2;
+  font-size: 17px;
+}
+.dropdown:focus{
+  outline: none; 
+}
+
+.dropdown span {
+  display: block;
+}
+
+/* Add more styles for the dropdown content as needed */

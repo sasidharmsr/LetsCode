@@ -1,0 +1,233 @@
+/* ContestComponent.module.css */
+.contest-component {
+    background-color: #121212;
+    color: white;
+    padding: 20px;
+    min-height: 100vh;
+    @media (min-width:576px) {
+      padding-left: 10%;
+    }
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    color: white;
+    @media (max-width:576px) {
+      flex-direction: column;
+    }
+  }
+  
+  .toggle {
+    display: flex;
+    align-items: center;
+  }
+  label{
+    color: white;
+    
+  }
+  .dateInputContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+  }
+  .dropdown {
+    background-color: #555555;
+    margin-right: 100px;
+    max-width: 150px;
+    border: none;
+    font-size: 20px;
+    border-radius: 5px;
+    color:white;
+    height: 40px;
+    @media (max-width:576px) {
+      width: 120px;
+      font-size: 16px;
+      margin-right: 0px;
+    }
+  }
+  .eddropdown{
+    width: 200px;
+    @media (max-width:576px) {
+      width: 100px;
+    }
+  }
+  .dropdown:focus{
+    background-color: #555555;
+  }
+  .dropdown:hover{
+    background-color: #555555;
+  }
+  .dropdown
+  option{
+    height: 50px;
+  }
+  .dropdown:focus{
+    outline: none; 
+  }
+
+  .subtitle{
+    margin-right: 20px;
+  }
+  .content {
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .contest-title {
+    margin-top: 10px;
+    font-size: 26px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    @media (max-width:576px) {
+      font-size: 20px;
+    }
+  }
+  .submission-title{
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    @media (max-width: 576px) {
+      font-size: 20px;
+     }
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .tableRow{
+
+    @media (max-width: 576px) {
+     display: flex;
+     flex-direction: column;
+     margin-top: 10px;
+     border: 1px solid silver;
+    }
+  }
+  th,
+  td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #484848;
+    @media (max-width: 576px) {
+      min-width: 100%;
+     }
+
+  }
+  
+  .pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .page-item {
+    cursor: pointer;
+  }
+  
+  .page-link {
+    color: #007bff;
+  }
+  
+  .page-item.disabled .page-link {
+    color: #ccc;
+    pointer-events: none;
+  }
+  
+  .celllink{
+    text-decoration: none;
+    color: aliceblue;
+  }
+
+  .cell{
+    font-weight: 400;
+    overflow: hidden;
+    max-width: 140px;
+    white-space: nowrap;
+  }
+
+  .cell-1{
+    color: #c0c0c0;
+  }
+  .cell-2{
+    color: #c0c0c0;
+  }
+
+  .cell-3{
+    color:#3faf3f
+  }
+  .cell-4{
+    color:#3faf3f
+  }
+  .cell-5{
+    color:#40dabf
+  }
+  .cell-6{
+    color:#40dabf
+  }
+  .cell-7{
+    color: #ff6767;
+  }
+  .bg-cell{
+    background-color: #005c08;
+  }
+
+
+  
+  .green-text {
+    background-color: #282828;
+    color: white;
+  }
+  
+  .red-text {
+    background-color: #282828;
+    color: red;
+  }
+
+ 
+  .datediv{
+    display: flex;
+    margin-right: 15px;
+    padding-top: 10px;
+    align-items: center;
+    @media (max-width:576px) {
+      width: 100px;
+      overflow: hidden;
+    }
+  }
+  .react-datepicker__input-container {
+    display: inline-block;
+    border: 1px solid red;
+    border-radius: 10px;
+  }
+  
+  .react-datepicker__input-container input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 14px;
+  }
+  
+  button {
+    margin-top: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  

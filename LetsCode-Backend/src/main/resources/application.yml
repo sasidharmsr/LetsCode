@@ -1,0 +1,41 @@
+# Combined Configuration
+
+application:
+  security:
+    jwt:
+      secret-key: ${JWT_SECRET_KEY}
+      expiration: 6000000
+      refresh-token:
+        expiration: 604800000 
+twilio:
+  accountSid: ${TWILIO_ACCOUNT_SID}
+  authToken: ${TWILIO_AUTH_TOKEN}
+  phoneNumber: ${TWILIO_PHONE_NUMBER}
+
+spring:
+  sendgrid:
+    api-key: ${SENDGRID_API_KEY}
+    from-email: ${SENDGRID_FROM_EMAIL}
+
+  redis:
+    url: ${REDIS_URL}
+    port: ${REDIS_PORT}
+
+  datasource:
+    password: ${DB_PASSWORD}
+    platform: mysql
+    url: jdbc:mysql://${DB_HOST}:${DB_PORT}/${DB_NAME}
+    username: ${DB_USERNAME}
+
+  app:
+    url: ${APP_URL}
+    time: ${APP_TIME}
+    token: ${APP_TOKEN}
+
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG
+      telegram: 
+        telegrambots: ERROR

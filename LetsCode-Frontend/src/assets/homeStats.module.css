@@ -1,0 +1,183 @@
+.pie {
+  --w: 70px;
+  color: white;
+  width: var(--w);
+  aspect-ratio: 1;
+  position: relative;
+  display: inline-grid;
+  place-content: center;
+  margin: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: sans-serif;
+  margin-right: 15px;
+  border: 2px solid #4b4a49;
+  border-radius: 50%;
+}
+
+.pie:before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  inset: 0;
+  background: conic-gradient(var(--c) calc(var(--p)*1%), #0000 0);
+  -webkit-mask: radial-gradient(farthest-side, #0000 calc(99% - var(--b)), #000 calc(100% - var(--b)));
+  mask: radial-gradient(farthest-side, #0000 calc(99% - var(--b)), #000 calc(100% - var(--b)));
+}
+
+  .heading{
+    color: #9fa1a4;
+    font-size: 20px;
+    height: 40px;
+  }
+  .maindiv{
+    display: flex;
+    flex-direction: column;
+    background-color: #282828;
+    width: 90%;
+    margin-top: 20px;
+  }
+  .title{
+    font-size: 26px;
+    color: #9fa1a4;;
+    margin-left: 15px;
+  }
+
+  
+  
+  /* .pie:before {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    inset: 0;
+    background: conic-gradient(var(--c) calc(var(--p)*1%),#0000 0);
+    -webkit-mask:radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)));
+            mask:radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)));
+  } */
+
+  /* HomeStats.module.css */
+
+
+
+  .pies {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px; /* Add margin for spacing */
+    overflow: hidden;
+    background-color: white; /* Set background color to white */
+  }
+
+.progress {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 0deg,
+    #ffa116 0% var(--percentage),
+    white var(--percentage) 100%
+  );
+}
+
+.circle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  transform: rotate(180deg); /* Rotate to make the remaining half white */
+}
+
+
+/* UserSearchComponent.module.css */
+
+.user-search-component {
+  background-color: #1a1a1a;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  border-right: 1px solid #595959;
+  @media (min-width: 768px) {
+    background-color: #1a1a1a;
+    position: fixed;
+    margin-left: 7%;
+    width: 27%;
+    z-index: 9999;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    border-right: 1px solid #595959;
+  }
+}
+.searchTitle{
+  text-align: start;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 10px;
+}
+
+.search-bar input {
+  background-color: #262626;
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+}
+
+.search-bar input:focus{
+  outline: none; 
+}
+
+.user-list {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.user-item {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+.user-item:hover{
+  background-color: #212121;
+}
+
+.user-item img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.user-name {
+  font-weight: 600;
+  font-size: 18px;
+}
+.subuser{
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+
+}
+
+.user-email {
+  font-size: 18px;
+  color: #a2a2a2;
+}

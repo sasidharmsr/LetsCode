@@ -1,0 +1,533 @@
+/* TwoColumnLayout.module.css */
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-family: 'Roboto', sans-serif;
+
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #cbff00;
+  width: 50%;
+  height: 500px;
+  padding: 25px;
+  margin:20px;
+}
+
+.title {
+  font-size: 25px;
+  margin: 0;
+  font-weight: 600;
+  
+}
+
+.description {
+  font-size: 30px;
+  font-weight: 200;
+  margin: 10px 0;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: white;
+  font-weight: 500;
+  color: black;
+  border: none;
+  cursor: pointer;
+  width: 150px;
+  transition: background-color 0.2s;
+}
+
+.button:hover {
+  background-color: black;
+  color: white;
+}
+
+.icon {
+  margin-left: 10px;
+}
+
+.right {
+  width: 50%; 
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.word {
+  font-size: 20px;
+  height: 30px;
+  width: 220px;
+  margin-left: 5px;
+  margin-right: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-weight: 400;
+  align-self: center;
+  border-bottom:2px solid #dddcdc;
+  cursor: pointer;
+}
+
+
+.selectedWord{
+  font-size: 20px;
+  height: 30px;
+  width: 220px;
+  margin-left: 5px;
+  margin-right: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-weight: 400;
+  align-self: center;
+  border-bottom:2px solid #dddcdc;
+  cursor: pointer;
+  background-color:#cbff00;
+}
+
+.error {
+  color: red;
+  font-size: 17px;
+  
+}
+
+/* CalendarGrid.module.css */
+
+/* Main calendar container */
+
+/* Days of the week */
+.daysOfWeek {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #636366;
+  
+}
+
+.dayOfWeek {
+  width: calc(100% / 7);
+}
+
+
+
+/* Dates container */
+.dates {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Empty cells before the starting day */
+.emptyCell {
+  width: 14.28%;
+  height: 40px;
+}
+
+/* Individual date box */
+.date {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  height: 40px;
+  position: relative;
+  width: 14.28%;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.activedate{
+  color: #A7E9AF;
+}
+
+.date:hover {
+  background-color: #3e3e3e;
+  text-align: center;
+  height: 40px;
+  position: relative;
+  width: 14.28%;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.LikesTitle{
+  font-size: 15px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.followerItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px;
+}
+.modalBody {
+  background-color: #262626;
+  color: white;
+  max-height: 60vh; 
+  overflow-y: scroll;
+}
+.modalHeader{
+  background-color: #262626;
+  color: white;
+}
+.modalHeader .close{
+  color: white;
+}
+.followerIcon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.curdate{
+  background-color: #4cc575;
+  color: white;
+  text-align: center;
+
+}
+.curdate:hover{
+  background-color: #4cc575;
+  color: white;
+}
+
+.loader {
+  position: absolute; 
+  bottom: 0;
+  left: 50%; 
+  transform: translateX(-50%);
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 100px;
+}
+
+/* Dropdown container */
+.dropdown-container {
+  position: relative;
+  background-color: transparent;
+}
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: block;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 30px;
+  min-height: 30px;
+  border-radius: 5px;
+  z-index: 1;
+}
+.delete-clicked {
+  border-radius: 5px;
+  text-align: center;
+  color: black; /* Change the text color when clicked */
+}
+
+
+.spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.dropdown {
+  max-width: 150px;
+  border: none;
+  font-size: 20px;
+  border-radius: 5px;
+  background-color: #282828;
+  height: 40px;
+  @media (max-width:576px) {
+    width: 120px;
+    font-size: 16px;
+    margin-right: 0px;
+  }
+}
+
+
+.dropdown:focus,
+.dropdown:hover,
+.dropdown:active {
+  background-color: transparent !important;
+  color: #4cc575 !important;
+}
+
+
+.dropdown
+option{
+  height: 50px;
+}
+.dropdown:focus{
+  outline: none; 
+}
+
+/* Hovered date number */
+.number {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  color: black;
+  font-size: 14px;
+  padding: 2px 6px;
+  width: 150px;
+  font-weight: 600;
+}
+
+/* OptionsComponent.module.css */
+
+/* Calendar container */
+.calendar {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+  background-color: #282828;
+  border-radius: 4px;
+  color: #9fa1a4;
+  font-family: 'Roboto', sans-serif;
+  @media (min-width: 768px) {
+    width: 90%;
+  }
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color:#74b49b
+  
+}
+
+/* Day of the month */
+.day {
+  margin-right: 10px;
+  font-size: 15px;
+}
+
+.icon {
+  cursor: pointer;
+  font-size: smaller; /* Add some spacing between the icon and the text */
+}
+
+
+/* Countdown timer */
+.time {
+  color: #bdbfc2;
+  font-size: 10px;
+}
+.month {
+  font-size: 1.2rem;
+  margin-left: 10px;
+}
+
+/* Sidebar.module.css */
+
+.sidebar {
+  width: 60px;
+  background-color: #222;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+.sidebarOpen {
+  width: 200px;
+}
+
+.toggleButton {
+  margin-top: 1rem;
+}
+
+.icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.icons a {
+  color: inherit;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+
+.userIcon {
+  margin-bottom: 1rem;
+}
+
+
+.create-post {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px;
+  border-bottom: 1px solid #e0e0e0;
+  background-color: white;
+  width: 100%;
+  height: 70px;
+  border-radius: 10px;
+}
+
+.profile-icon {
+  margin-right: 10px;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.start-post {
+  padding: 10px;
+  cursor: pointer;
+  color:#666666;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  width: 450px;
+  height: 45px;
+  margin-right: auto;
+  border-radius: 10px;
+  border: 1px solid #b2b2b2;
+}
+.start-post:hover{
+  background-color: #ebebeb;
+}
+
+.start-comment {
+  padding: 10px;
+  color:#666666;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  width: 450px;
+  height: 45px;
+  margin-right: auto;
+  border-radius: 10px;
+  border: 1px solid #b2b2b2;
+}
+
+.start-comment:focus{
+  outline: none;
+}
+
+
+.post-options {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.post-options .profile-icon {
+  margin-right: 10px;
+  font-size: 24px;
+}
+
+.add-comment{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px;
+  background-color: transparent;
+  width: 100%;
+  height: 70px;
+  border-radius: 10px;
+
+}
+/* Add more styling as needed */
+
+
+.post {
+  background-color:#282828;
+  color: white;
+  padding: 20px;
+  padding-bottom: 2px;
+  margin: 10px;
+  border-radius: 8px;
+  text-overflow: ellipsis;
+}
+
+.profileIcon {
+  margin-right: 10px;
+}
+
+.userID {
+  margin-left: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.description {
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.horizontalLine {
+  /* Adjust the width as needed */
+  border: none;
+  border-top: 3px solid #bfbebb;
+  margin: 10px auto; /* Adjust the margin as needed */
+}
+
+.actions {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.like {
+  display: flex;
+  align-items: center;
+}
+.comment{
+  display: flex;
+  align-items: center;
+  margin-left: 40px;
+  margin-bottom: 2px;
+}
+
+
+.likeCount,
+.commentCount {
+  margin-left: 5px;
+}
+
+.divider {
+  margin-top: 20px;
+}
+
+.seeMore {
+  color: #1890ff;      /* Blue color */
+  cursor: pointer;    
+}
+
+.des{
+  height: 150px;
+  @media (max-width:576px) {
+    height: auto;
+  }
+}

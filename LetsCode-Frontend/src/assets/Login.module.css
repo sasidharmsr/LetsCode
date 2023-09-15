@@ -1,0 +1,232 @@
+/* Login.module.css */
+.loginContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f9fa;
+  }
+  
+  .loginForm {
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    height: 500px;
+    max-width: 350px;
+  }
+
+  .userIdForm {
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    height: 600px;
+    max-width: 400px;
+  }
+
+  .registerForm {
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    height: 500px;
+    max-width: 400px;
+  }
+
+  .registerdiv{
+    height: 15%;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid #dbdbdb; */
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.1);
+  }
+  .Form{
+    display: flex;
+    padding: 30px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 85%;
+    /* border: 1px solid #dbdbdb; */
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.1);
+  }
+
+  .RegisterForm{
+    display: flex;
+    padding: 30px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+    /* border: 1px solid #dbdbdb; */
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.1);
+  }
+  
+  .bgImage {
+    height: 500px;
+    width: max-content;
+    margin-right: 10px;
+  }
+  
+  .Button{
+    width: 100%;
+    background-color: #52b2f2;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+  .loginOptions {
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .inputFiled{
+    border: 2px solid #ced4da; /* Border style and color */
+  padding: 10px; /* Padding around the input */
+    background-color:#f7f7f7;
+    color: black;/* Background color */
+  width: 100%; /* Make the input span the full width of its container */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px; /* Font size */
+  transition: border-color 0.3s;
+  border-radius: 10px;
+    width: 100%;
+    padding-left: 30px;
+  }
+
+  .inputFiled:focus{
+    outline: none; 
+  }
+
+  .hiddenOnSmall {
+    @media (max-width: 576px) {
+      display: none !important;
+    }
+  }
+  
+  .title{
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: larger;
+  }
+
+  
+  .inputContainer {
+    position: relative;
+  }
+
+.passwordContainer {
+    /* Position the "show password" icon inside the input field */
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .showPasswordIcon {
+    /* Style the "show password" toggle icon */
+    cursor: pointer;
+    position: absolute;
+    right: 10px; /* Adjust the distance from the right edge of the input */
+    color: #6c757d; /* Set the icon color */
+    transition: color 0.3s; /* Smooth color transition */
+  }
+  
+  .showPasswordIcon:hover {
+    /* Change icon color on hover */
+    color: #007bff; /* Set the hover color */
+  }
+
+  .loginOptions a {
+    /* Style the link */
+    text-decoration: none;
+    color: black; /* Set the default color (black) */
+    transition: color 0.3s; /* Smooth color transition */
+  }
+  
+  .loginOptions a:hover {
+    /* Change link color on hover */
+    color: #007bff; /* Set the hover color (bright blue) */
+  }
+  
+  .icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    z-index: 1;
+    color: #999;
+  }
+
+  .error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  /* Styles for the input field when there's an error */
+  .errorInput {
+    border: 1px solid red;
+  }
+  label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+  }
+  .errorLabel {
+    color: #f44336; /* Red color for error label */
+  }
+
+  /* BoxSelector.module.css */
+
+.boxSelectorContainer {
+  margin: 20px auto ;
+  display: flex;
+  flex-direction: row;
+
+}
+
+
+
+.boxDescription{
+  background-color: greenyellow;
+  min-height: vh;
+}
+
+
+
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-height: 40px;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border: 2px solid #ccc;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.selectedBox {
+  background-color: #86c5ff;
+  color: white;
+  border-color: #68a6e3;
+}
+
+.submitButton {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.submitButton:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}

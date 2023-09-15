@@ -1,0 +1,36 @@
+version: '3'
+services:
+  app:
+    image: sasidharmsr/msrapp:v1.03
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql-spring:3306/msr_database
+      SPRING_DATASOURCE_USERNAME: user
+      SPRING_DATASOURCE_PASSWORD: 1234
+      SPRING_REDIS_HOST: redis
+      SPRING_REDIS_URL: redis
+      SPRING_REDIS_PORT: 6379
+      SPRING_APP_URL: http://react:3000
+    depends_on:
+      - mysql-spring
+      - redis
+  mysql-spring:
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+      MYSQL_DATABASE: msr_database
+      MYSQL_USER: user
+      MYSQL_PASSWORD: 1234
+  redis:
+    image: redis:latest
+    ports:
+      - "6379:6379"
+      
+  react:
+    image: react:v1.43
+    ports:
+      - "3000:3000"
+    environment:
+      REACT_APP_API_URL: http://app:8000
+

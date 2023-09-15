@@ -1,0 +1,73 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: msr-app
+  labels:
+    app: msr-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: msr-app
+  template:
+    metadata:
+      labels:
+        app: msr-app
+    spec:
+      containers:
+      - name: msr-app
+        image: sasidharmsr/msrapp:v1.03
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+        env:
+        - name: SPRING_DATASOURCE_URL
+          value: jdbc:mysql://mysql-service:3306/msr_database
+
+        - name: SPRING_REDIS_HOST
+          value: redis
+
+        - name: SPRING_REDIS_URL
+          value: redis
+
+        - name: SPRING_REDIS_PORT
+          value: "6379"
+            
+        - name: SPRING_DATASOURCE_USERNAME
+          valueFrom: 
+            secretKeyRef:
+              name: mysql-secret
+              key: mysql-user
+        - name: SPRING_DATASOURCE_PASSWORD
+          valueFrom: 
+            secretKeyRef:
+              name: mysql-secret
+              key: mysql-password
+        - name: SPRING_APP_TIME
+          valueFrom: 
+            configMapKeyRef:
+              name: mysql-configmap
+              key: app_time
+        - name: SPRING_APP_URL
+          valueFrom: 
+            configMapKeyRef:
+              name: mysql-configmap
+              key: react_url
+         
+        
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: msr-app-service
+spec:
+  selector:
+    app: msr-app
+  type: LoadBalancer
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
+      nodePort: 30043
+
+      

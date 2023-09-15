@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: msr-react
+  labels:
+    app: msr-react
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: msr-react
+  template:
+    metadata:
+      labels:
+        app: msr-react
+    spec:
+      containers:
+      - name: msr-react
+        image: sasidharmsr/reactapp:v1.00
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 3000
+        env:
+        - name: REACT_APP_API_URL
+          valueFrom: 
+            configMapKeyRef:
+              name: mysql-configmap
+              key: spring_url
+        
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: msr-react-service
+spec:
+  selector:
+    app: msr-react
+  type: LoadBalancer
+  ports:
+    - protocol: TCP
+      port: 3000
+      targetPort: 3000
+      nodePort: 30041
+
+      
